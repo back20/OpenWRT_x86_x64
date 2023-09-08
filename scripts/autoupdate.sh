@@ -43,8 +43,8 @@ download_file () {
     cd /tmp && clean_up
     days=$(($days+1))
     echo `(date -d "@$(($(busybox date +%s) - 86400*($days-1)))" +%Y.%m.%d)`
-    wget https://github.com/DHDAXCW/FusionWRT_x86_x64/releases/download/$(date -d "@$(($(busybox date +%s) - 86400*($days-1)))" +%Y.%m.%d)-Lean$choose/openwrt-x86-64-generic-squashfs-combined-efi.img.gz
-    wget https://github.com/DHDAXCW/FusionWRT_x86_x64/releases/download/$(date -d "@$(($(busybox date +%s) - 86400*($days-1)))" +%Y.%m.%d)-Lean$choose/sha256sums
+    wget https://github.com/back20/OpenWRT_x86_x64/releases/download/$(date -d "@$(($(busybox date +%s) - 86400*($days-1)))" +%Y.%m.%d)-Lean$choose/openwrt-x86-64-generic-squashfs-combined-efi.img.gz
+    wget https://github.com/back20/OpenWRT_x86_x64/releases/download/$(date -d "@$(($(busybox date +%s) - 86400*($days-1)))" +%Y.%m.%d)-Lean$choose/sha256sums
     exist_judge
 }
 #存在判断
