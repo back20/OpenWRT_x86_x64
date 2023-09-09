@@ -136,4 +136,8 @@ sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/tt
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
 
+# 修改概览里时间显示为中文数字
+sed -i 's/os.date()/os.date("%Y年%m月%d日") .. " " .. translate(os.date("%A")) .. " " .. os.date("%X")/g' package/lean/autocore/files/x86/index.htm
+
+
 # svn co 复制 仓库下的文件夹 git clone 复制整个仓库
