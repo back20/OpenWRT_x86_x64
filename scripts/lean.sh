@@ -39,7 +39,7 @@ git clone --depth=1 https://github.com/fw876/helloworld
 
 # Add luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall
 
 # Add luci-app-unblockneteasemusic
@@ -62,6 +62,9 @@ svn export https://github.com/linkease/nas-packages/trunk/network/services/ddnst
 
 # Add OpenClash
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+
+# Add luci-app-advanced
+git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
 
 # Add luci-app-poweroff
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
@@ -93,8 +96,8 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter
 # Add luci-aliyundrive-webdav
 rm -rf ../../customfeeds/luci/applications/luci-app-aliyundrive-webdav
 rm -rf ../../customfeeds/packages/multimedia/aliyundrive-webdav
-svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
-svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
+# svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
+# svn export https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
 popd
 
 # Add Pandownload
