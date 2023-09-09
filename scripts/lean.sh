@@ -123,5 +123,17 @@ popd
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
+# 修改主机名字，修改你喜欢的就行（不能纯数字或者使用中文）
+# sed -i "/uci commit system/i\uci set system.@system[0].hostname='openwrt'" package/lean/default-settings/files/zzz-default-settings
+# sed -i "s/hostname='.*'/hostname='Jejz'/g" ./package/base-files/files/bin/config_generate
+
+# 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
+sed -i '/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./d' package/lean/default-settings/files/zzz-default-settings
+
+# 设置ttyd免帐号登录
+sed -i 's/\/bin\/login/\/bin\/login -f root/' feeds/packages/utils/ttyd/files/ttyd.config
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
+
+# svn co 复制 仓库下的文件夹 git clone 复制整个仓库
