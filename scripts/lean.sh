@@ -66,6 +66,9 @@ svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 # Add luci-app-advanced
 git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
 
+# Add luci-app-netwizard
+git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard
+
 # Add luci-app-poweroff
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff
 
@@ -138,6 +141,5 @@ sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_genera
 
 # 修改概览里时间显示为中文数字
 sed -i 's/os.date()/os.date("%Y年%m月%d日") .. " " .. translate(os.date("%A")) .. " " .. os.date("%X")/g' package/lean/autocore/files/x86/index.htm
-
 
 # svn co 复制 仓库下的文件夹 git clone 复制整个仓库
