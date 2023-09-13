@@ -147,7 +147,3 @@ sed -i 's/os.date()/os.date("%Y年%m月%d日") .. " " .. translate(os.date("%A")
 # 更换内核
 # sed -i 's/KERNEL_PATCHVER:=*.*/KERNEL_PATCHVER:=6.1/g' target/linux/x86/Makefile       
 # sed -i 's/KERNEL_TESTING_PATCHVER:=*.*/KERNEL_TESTING_PATCHVER:=6.1/g' target/linux/x86/Makefile
-
-# 更换lan口和wan口
-sed -i 's/ucidef_set_interface_lan 'eth0'/ucidef_set_interface_lan 'eth1 eth2 eth3'/g' package/base-files/files/etc/board.d/99-default_network
-sed -i 's/ucidef_set_interface_wan 'eth1'/ucidef_set_interface_wan 'eth0'/g' package/base-files/files/etc/board.d/99-default_network
